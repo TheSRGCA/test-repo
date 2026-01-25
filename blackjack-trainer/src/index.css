@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Card Styles */
+.card-container {
+  perspective: 1000px;
+}
+
+.card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Chip styles */
+.chip {
+  border: 4px dashed rgba(255, 255, 255, 0.5);
+}
+
+/* Strategy chart cell hover effect */
+.strategy-cell:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+/* Hand signal animation */
+@keyframes tapSignal {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes waveSignal {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.signal-hit {
+  animation: tapSignal 0.5s ease-in-out 2;
+}
+
+.signal-stand {
+  animation: waveSignal 0.5s ease-in-out 2;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a6a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a5a7a;
+}
