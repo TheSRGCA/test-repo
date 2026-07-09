@@ -9,6 +9,7 @@ import { QuickRulesDisplay } from '../components/GameSettings';
 import { QuickStats } from '../components/Stats';
 import { calculateHandValue, isBusted, isBlackjack, canSplit } from '../utils/deck';
 import { checkDeviation } from '../data/deviations';
+import { hapticLight, hapticMedium, hapticSuccess, hapticWarning, hapticError, hapticSelection } from '../utils/haptics';
 
 export default function PlayPage() {
   const {
@@ -105,6 +106,13 @@ export default function PlayPage() {
         isDeviation: correctActionData.isDeviation,
       });
 
+      // Haptic feedback based on correctness
+      if (isCorrect) {
+        hapticSuccess();
+      } else {
+        hapticWarning();
+      }
+
       // Clear feedback after delay
       setTimeout(() => setActionFeedback(null), 1500);
     }
@@ -112,35 +120,41 @@ export default function PlayPage() {
 
   // Action handlers
   const handleHit = () => {
+    hapticLight();
     recordAction('HIT');
     playerHit();
   };
 
   const handleStand = () => {
+    hapticLight();
     recordAction('STAND');
     playerStand();
   };
 
   const handleDouble = () => {
     if (!canDoubleDown) return;
+    hapticMedium();
     recordAction('DOUBLE');
     playerDouble();
   };
 
   const handleSplit = () => {
     if (!canSplitHand) return;
+    hapticMedium();
     recordAction('SPLIT');
     playerSplit();
   };
 
   const handleSurrender = () => {
     if (!canSurrenderHand) return;
+    hapticLight();
     recordAction('SURRENDER');
     playerSurrender();
   };
 
   // Start new hand
   const startNewHand = () => {
+    hapticMedium();
     setResults(null);
     setActionFeedback(null);
     setActiveDeviation(null);
@@ -155,6 +169,7 @@ export default function PlayPage() {
 
   // Bet controls
   const adjustBet = (amount) => {
+    hapticSelection();
     const newBet = Math.max(5, Math.min(500, state.currentBet + amount));
     dispatch({ type: 'SET_BET', payload: newBet });
   };
