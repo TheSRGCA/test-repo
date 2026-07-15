@@ -65,7 +65,7 @@ export default function DeviationsChart({ currentTrueCount = 0 }) {
   );
 }
 
-function DeviationsTable({ deviations, currentTC, isSurrender = false }) {
+function DeviationsTable({ deviations, currentTC }) {
   return (
     <table className="w-full text-sm">
       <thead>

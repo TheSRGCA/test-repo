@@ -6,7 +6,6 @@ import {
   isBlackjack,
   isBusted,
   isSoftHand,
-  canSplit,
   calculateRunningCount,
   calculateTrueCount,
   estimateDecksRemaining,
@@ -103,7 +102,7 @@ function gameReducer(state, action) {
 
     case 'DEAL_CARD': {
       if (state.shoe.length === 0) return state;
-      const [card, ...remainingShoe] = state.shoe;
+      const [, ...remainingShoe] = state.shoe;
       return {
         ...state,
         shoe: remainingShoe,
@@ -284,10 +283,6 @@ function gameReducer(state, action) {
     }
 
     case 'RESET_HAND': {
-      // Check if we need to shuffle
-      const totalCards = state.rules.numDecks * 52;
-      const shufflePoint = totalCards * (1 - state.rules.penetration);
-
       return {
         ...state,
         playerHands: [[]],
@@ -357,7 +352,7 @@ export function GameProvider({ children }) {
     if (state.shoe.length === 0) {
       dispatch({ type: 'INITIALIZE_SHOE' });
     }
-  }, []);
+  }, [state.shoe.length]);
 
   // Check if shuffle needed
   const needsShuffle = useCallback(() => {
@@ -383,7 +378,7 @@ export function GameProvider({ children }) {
 
     // Check for deviation first
     if (state.showDeviations) {
-      const deviation = getDeviationAction(currentHand, dealerUpcard, trueCount, state.rules);
+      const deviation = getDeviationAction(currentHand, dealerUpcard, trueCount);
       if (deviation) {
         return { action: deviation.action, isDeviation: true, deviation: deviation.deviation };
       }
@@ -538,6 +533,7 @@ export function GameProvider({ children }) {
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useGame() {
   const context = useContext(GameContext);
   if (!context) {

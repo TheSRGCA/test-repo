@@ -117,11 +117,21 @@ export default function HandSignals({ highlightAction = null }) {
   const [activeSignal, setActiveSignal] = useState(null);
 
   useEffect(() => {
-    if (highlightAction && signals[highlightAction]) {
-      setActiveSignal(highlightAction);
-      const timer = setTimeout(() => setActiveSignal(null), 2000);
-      return () => clearTimeout(timer);
+    if (!highlightAction || !signals[highlightAction]) {
+      return;
     }
+
+    // Use a microtask to avoid synchronous setState warning
+    const id = requestAnimationFrame(() => {
+      setActiveSignal(highlightAction);
+    });
+
+    const timer = setTimeout(() => setActiveSignal(null), 2000);
+
+    return () => {
+      cancelAnimationFrame(id);
+      clearTimeout(timer);
+    };
   }, [highlightAction]);
 
   return (

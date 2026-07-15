@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Card from '../components/Card';
-import { createDeck, shuffleDeck, getHiLoValue, SUIT_SYMBOLS, SUIT_COLORS } from '../utils/deck';
+import { createDeck, shuffleDeck } from '../utils/deck';
 import { getBasicStrategy, actionColors } from '../data/basicStrategy';
 
 const modes = [
@@ -61,7 +61,9 @@ function CountingPractice() {
   }, [cardsPerRound]);
 
   useEffect(() => {
-    startNewRound();
+    // Defer initialization to avoid synchronous setState warning
+    const id = requestAnimationFrame(() => startNewRound());
+    return () => cancelAnimationFrame(id);
   }, [startNewRound]);
 
   const nextCard = () => {
@@ -207,7 +209,9 @@ function StrategyPractice() {
   }, [handType]);
 
   useEffect(() => {
-    generateHand();
+    // Defer initialization to avoid synchronous setState warning
+    const id = requestAnimationFrame(() => generateHand());
+    return () => cancelAnimationFrame(id);
   }, [generateHand]);
 
   const handleAction = (action) => {
@@ -323,8 +327,12 @@ function SpeedPractice() {
   useEffect(() => {
     if (!isRunning || currentIndex >= cards.length) {
       if (isRunning && currentIndex >= cards.length) {
-        setIsRunning(false);
-        setEndTime(Date.now());
+        // Defer end-of-practice state updates
+        const id = requestAnimationFrame(() => {
+          setIsRunning(false);
+          setEndTime(Date.now());
+        });
+        return () => cancelAnimationFrame(id);
       }
       return;
     }

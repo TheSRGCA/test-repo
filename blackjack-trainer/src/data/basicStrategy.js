@@ -63,8 +63,6 @@ export function getDealerIndex(dealerCard) {
 
 // Get basic strategy action
 export function getBasicStrategy(playerCards, dealerUpcard, rules = {}) {
-  const { doubleAfterSplit = true, surrender = true, resplitAces = false } = rules;
-
   const dealerIndex = getDealerIndex(dealerUpcard);
   const handValue = calculateHandValueForStrategy(playerCards);
   const isSoft = isHandSoft(playerCards);

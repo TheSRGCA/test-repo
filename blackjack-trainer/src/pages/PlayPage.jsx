@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useGame } from '../contexts/GameContext';
 import Hand from '../components/Hand';
 import { HandSignalButton } from '../components/HandSignals';
@@ -7,9 +7,9 @@ import { MiniStrategyHint } from '../components/StrategyChart';
 import { DeviationAlert } from '../components/DeviationsChart';
 import { QuickRulesDisplay } from '../components/GameSettings';
 import { QuickStats } from '../components/Stats';
-import { calculateHandValue, isBusted, isBlackjack, canSplit } from '../utils/deck';
+import { isBusted, isBlackjack, canSplit } from '../utils/deck';
 import { checkDeviation } from '../data/deviations';
-import { hapticLight, hapticMedium, hapticSuccess, hapticWarning, hapticError, hapticSelection } from '../utils/haptics';
+import { hapticLight, hapticMedium, hapticSuccess, hapticWarning, hapticSelection } from '../utils/haptics';
 
 export default function PlayPage() {
   const {
@@ -30,27 +30,24 @@ export default function PlayPage() {
 
   const [results, setResults] = useState(null);
   const [actionFeedback, setActionFeedback] = useState(null);
-  const [activeDeviation, setActiveDeviation] = useState(null);
 
   const currentHand = state.playerHands[state.currentHandIndex] || [];
-  const handValue = calculateHandValue(currentHand);
   const busted = isBusted(currentHand);
   const hasBlackjack = currentHand.length === 2 && isBlackjack(currentHand);
   const canSplitHand = canSplit(currentHand) && state.playerHands.length < 4;
   const canDoubleDown = currentHand.length === 2 && state.playerChips >= state.bets[state.currentHandIndex];
   const canSurrenderHand = currentHand.length === 2 && state.rules.surrender;
 
-  // Check for deviation
-  useEffect(() => {
-    if (state.gamePhase === 'playerTurn' && state.showDeviations && currentHand.length >= 2) {
+  // Calculate deviation (derived state, no useEffect needed)
+  const activeDeviation = useMemo(() => {
+    const hand = state.playerHands[state.currentHandIndex] || [];
+    if (state.gamePhase === 'playerTurn' && state.showDeviations && hand.length >= 2) {
       const trueCount = getTrueCount();
       const dealerUpcard = state.dealerHand[0];
-      const deviation = checkDeviation(currentHand, dealerUpcard, trueCount);
-      setActiveDeviation(deviation);
-    } else {
-      setActiveDeviation(null);
+      return checkDeviation(hand, dealerUpcard, trueCount);
     }
-  }, [state.gamePhase, state.showDeviations, currentHand, state.dealerHand, getTrueCount]);
+    return null;
+  }, [state.gamePhase, state.showDeviations, state.playerHands, state.currentHandIndex, state.dealerHand, getTrueCount]);
 
   // Handle busts and blackjacks automatically
   useEffect(() => {
@@ -85,8 +82,12 @@ export default function PlayPage() {
   // Handle payout
   useEffect(() => {
     if (state.gamePhase === 'payout') {
-      const payoutResults = resolvePayouts();
-      setResults(payoutResults);
+      // Defer to avoid synchronous setState warning
+      const id = requestAnimationFrame(() => {
+        const payoutResults = resolvePayouts();
+        setResults(payoutResults);
+      });
+      return () => cancelAnimationFrame(id);
     }
   }, [state.gamePhase, resolvePayouts]);
 
@@ -157,7 +158,6 @@ export default function PlayPage() {
     hapticMedium();
     setResults(null);
     setActionFeedback(null);
-    setActiveDeviation(null);
 
     if (needsShuffle()) {
       dispatch({ type: 'SHUFFLE_SHOE' });

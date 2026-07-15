@@ -338,7 +338,7 @@ function evaluateThreshold(trueCount, threshold, thresholdType) {
 }
 
 // Get deviation action if applicable
-export function getDeviationAction(hand, dealerUpcard, trueCount, rules = {}) {
+export function getDeviationAction(hand, dealerUpcard, trueCount) {
   const deviation = checkDeviation(hand, dealerUpcard, trueCount);
   if (deviation) {
     return {
