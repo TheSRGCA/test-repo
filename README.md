@@ -1,6 +1,6 @@
 # SRGCA — Personal Brand Website
 
-Production-quality personal brand website for Sergio Armando (SRGCA). Dark, mobile-first Next.js site showcasing Doomsday Brand, product and brand leadership, and professional work.
+Production-quality personal brand website for Sergio Armando (SRGCA). Dark, mobile-first Next.js site showcasing professional work in project management, branding, and digital media.
 
 ## Overview
 
@@ -74,11 +74,11 @@ No environment variables required for the base site.
 
 ## Sections
 
-- **Hero** — Typography-led introduction with social links
-- **Now** — Current focus on Doomsday Brand
-- **Selected Work** — Freelance/Insomniac, Epic Cataloges, DMS
+- **Hero** — Project Management · Branding · Digital Media
+- **Current Projects** — Doomsday Brand, Freelance consulting
+- **Selected Work** — Insomniac Events, Epic Cataloges, DMS, Doomsday Brand
 - **Skills** — Product, brand, and creative capabilities
-- **About** — Background and approach
+- **About** — Professional background and current focus
 - **Contact** — Get in touch CTA with social links
 
 ## Contact
@@ -90,4 +90,4 @@ X: [@TheSRG_CA](https://x.com/TheSRG_CA)
 
 ---
 
-Built with Next.js. Educated at FIDM.
+Built with Next.js. FIDM Graduate.

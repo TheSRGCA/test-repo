@@ -15,9 +15,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sergio Armando (SRGCA) — Brand & Product Leader",
-  description: "Sergio Armando (SRGCA) — Founder of Doomsday Brand. Product, brand, and creative strategy for global music and lifestyle brands.",
-  keywords: ["Sergio Armando", "SRGCA", "Doomsday Brand", "hardstyle", "product management", "brand strategy", "electronic music"],
+  title: "Sergio Armando (SRGCA) — Project Management · Branding · Digital Media",
+  description: "Sergio Armando (SRGCA) — Project management, brand strategy, and digital media for global entertainment and lifestyle brands.",
+  keywords: ["Sergio Armando", "SRGCA", "project management", "brand strategy", "digital media", "entertainment", "product management"],
   authors: [{ name: "Sergio Armando" }],
   creator: "Sergio Armando",
   openGraph: {
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://srgca.online",
     siteName: "SRGCA",
-    title: "Sergio Armando (SRGCA) — Brand & Product Leader",
-    description: "Founder of Doomsday Brand. Product, brand, and creative strategy for global music and lifestyle brands.",
+    title: "Sergio Armando (SRGCA) — Project Management · Branding · Digital Media",
+    description: "Project management, brand strategy, and digital media for global entertainment and lifestyle brands.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sergio Armando (SRGCA) — Brand & Product Leader",
-    description: "Founder of Doomsday Brand. Product, brand, and creative strategy for global music and lifestyle brands.",
+    title: "Sergio Armando (SRGCA) — Project Management · Branding · Digital Media",
+    description: "Project management, brand strategy, and digital media for global entertainment and lifestyle brands.",
     creator: "@TheSRG_CA",
   },
   robots: {

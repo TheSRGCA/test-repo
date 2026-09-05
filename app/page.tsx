@@ -28,29 +28,36 @@ export default function Home() {
                 Sergio Armando
               </h1>
               <p className="text-xl sm:text-2xl md:text-3xl text-zinc-400 max-w-3xl leading-relaxed">
-                Founder of <Link href="https://doomsdaybrand.com" target="_blank" rel="noopener noreferrer" className="text-zinc-100 hover:text-zinc-300 transition-colors underline decoration-zinc-600 hover:decoration-zinc-400">Doomsday Brand</Link>. 
-                Product, brand, and creative strategy for global music and lifestyle brands.
+                Project Management · Branding · Digital Media
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
+                <Link 
+                  href="#contact"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-zinc-100 bg-zinc-800 hover:bg-zinc-700 rounded-lg transition-colors"
+                >
+                  Get in Touch
+                </Link>
                 <Link 
                   href="https://www.linkedin.com/in/sergio-a-01838b36" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-zinc-400 hover:text-zinc-100 border border-zinc-800 hover:border-zinc-700 rounded-lg transition-colors"
                 >
-                  LinkedIn →
+                  LinkedIn
                 </Link>
+              </div>
+              <div className="flex flex-wrap gap-4 pt-2 text-sm text-zinc-500">
                 <Link 
                   href="https://x.com/TheSRG_CA" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                  className="hover:text-zinc-400 transition-colors"
                 >
                   X →
                 </Link>
                 <Link 
                   href="mailto:Info@srgca.org"
-                  className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                  className="hover:text-zinc-400 transition-colors"
                 >
                   Email →
                 </Link>
@@ -63,8 +70,8 @@ export default function Home() {
         <section id="now" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-zinc-800/50">
           <div className="container mx-auto max-w-5xl">
             <div className="space-y-8">
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Now</h2>
-              <div className="space-y-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Current Projects</h2>
+              <div className="grid gap-8 md:grid-cols-2">
                 <div className="space-y-4">
                   <h3 className="text-xl sm:text-2xl font-semibold">
                     <Link 
@@ -76,8 +83,15 @@ export default function Home() {
                       Doomsday Brand →
                     </Link>
                   </h3>
-                  <p className="text-base sm:text-lg text-zinc-400 leading-relaxed max-w-3xl">
-                    Building the hardstyle and hard dance lifestyle brand. From the gym to the festival—born from a love of Showtek and the energy of the scene. High-quality apparel and merch for a global community.
+                  <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
+                    Hardstyle and hard dance lifestyle brand. Premium apparel and merch for a global community.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl sm:text-2xl font-semibold">Freelance Consulting</h3>
+                  <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
+                    Product management, creative direction, and brand strategy for Insomniac Events and leading entertainment brands.
                   </p>
                 </div>
               </div>
@@ -91,11 +105,11 @@ export default function Home() {
             <div className="space-y-12">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Selected Work</h2>
               
-              <div className="grid gap-12">
+              <div className="grid gap-12 md:grid-cols-2">
                 <div className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold">Freelance PM & Brand Consultant</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold">Insomniac Events</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Product management, creative direction, and brand strategy for Insomniac Events and leading music and entertainment brands.
+                    Product management and creative direction for one of the world's leading electronic music event producers.
                   </p>
                 </div>
 
@@ -110,6 +124,13 @@ export default function Home() {
                   <h3 className="text-xl sm:text-2xl font-semibold">DMS (Digital Media Solutions)</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
                     Product strategy and digital transformation for performance marketing and media solutions.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl sm:text-2xl font-semibold">Doomsday Brand</h3>
+                  <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
+                    Founded and launched hardstyle lifestyle brand with global reach in the electronic music community.
                   </p>
                 </div>
               </div>
@@ -157,13 +178,13 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">About</h2>
               <div className="space-y-6 text-base sm:text-lg text-zinc-400 leading-relaxed max-w-3xl">
                 <p>
-                  I'm a product and brand leader with a passion for building experiences that connect people to culture. My work spans music, entertainment, and lifestyle brands—from the hardstyle scene to global event production.
+                  I'm a project management and brand strategy leader with experience building products and experiences that connect people to culture. My work spans music, entertainment, and lifestyle brands—from global event production to digital media and apparel.
                 </p>
                 <p>
-                  Currently focused on growing Doomsday Brand, bringing the energy of hard dance culture to everyday life through apparel, community, and creative expression.
+                  Currently focused on multiple ventures including Doomsday Brand, consulting for Insomniac Events, and developing innovative brand experiences across the entertainment landscape.
                 </p>
                 <p>
-                  Bilingual (English/Spanish). Based in the US.
+                  Bilingual (English/Spanish). Based in the US. FIDM graduate.
                 </p>
               </div>
             </div>
