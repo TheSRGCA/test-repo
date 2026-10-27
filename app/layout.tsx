@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import MatrixBackground from "./components/MatrixBackground";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -47,7 +48,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} antialiased dark`}
     >
-      <body className="min-h-screen flex flex-col bg-black text-zinc-100">{children}</body>
+      <body className="min-h-screen flex flex-col bg-black text-zinc-100">
+        <MatrixBackground />
+        <div className="relative z-10">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
