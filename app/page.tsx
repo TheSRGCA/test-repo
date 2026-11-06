@@ -11,7 +11,7 @@ export default function Home() {
               SRGCA
             </Link>
             <div className="flex items-center gap-6 text-sm">
-              <Link href="#work" className="hover:text-zinc-300 transition-colors hidden sm:inline">Work</Link>
+              <Link href="/work" className="hover:text-zinc-300 transition-colors hidden sm:inline">Work</Link>
               <Link href="#about" className="hover:text-zinc-300 transition-colors hidden sm:inline">About</Link>
               <Link href="#contact" className="hover:text-zinc-300 transition-colors">Contact</Link>
             </div>
@@ -47,6 +47,12 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex flex-wrap gap-4 pt-2 text-sm text-zinc-500">
+                <Link
+                  href="/work"
+                  className="hover:text-zinc-400 transition-colors"
+                >
+                  Work →
+                </Link>
                 <Link 
                   href="https://x.com/TheSRG_CA" 
                   target="_blank" 
@@ -107,30 +113,30 @@ export default function Home() {
               
               <div className="grid gap-12 md:grid-cols-2">
                 <div className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold">Insomniac Events</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold">Cherry Valley Analytics</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Product management and creative direction for one of the world's leading electronic music event producers.
+                    Built the offer, site and automated lead system.
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold">Epic Cataloges</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold">Project Management Systems</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Led product and brand development for innovative catalog solutions in the entertainment space.
+                    Designed the Project Workspace boards, approval flow and lead intake.
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold">DMS (Digital Media Solutions)</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold">Branding and digital media</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Product strategy and digital transformation for performance marketing and media solutions.
+                    Creative direction and content production.
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   <h3 className="text-xl sm:text-2xl font-semibold">Doomsday Brand</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Founded and launched hardstyle lifestyle brand with global reach in the electronic music community.
+                    Designer, Brand Manager, and Digital Media for an apparel brand.
                   </p>
                 </div>
               </div>
@@ -178,7 +184,7 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">About</h2>
               <div className="space-y-6 text-base sm:text-lg text-zinc-400 leading-relaxed max-w-3xl">
                 <p>
-                  I'm a project management and brand strategy leader with experience building products and experiences that connect people to culture. My work spans music, entertainment, and lifestyle brands—from global event production to digital media and apparel.
+                  I&apos;m a project management and brand strategy leader with experience building products and experiences that connect people to culture. My work spans music, entertainment, and lifestyle brands—from global event production to digital media and apparel.
                 </p>
                 <p>
                   Currently focused on multiple ventures including Doomsday Brand, consulting for Insomniac Events, and developing innovative brand experiences across the entertainment landscape.

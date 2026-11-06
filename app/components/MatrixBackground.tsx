@@ -1,33 +1,62 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
-// Configuration object for easy tweaking
-const CONFIG = {
-  // Visual settings
-  color: '#8b5cf6',           // Character color (purple/violet)
-  leadColor: '#c4b5fd',       // Brighter lead character color (lighter lavender)
-  opacity: 0.12,              // Base opacity for subtle effect
-  leadOpacity: 0.18,          // Lead character opacity (slightly brighter)
-  trailOpacity: 0.05,         // Fade trail opacity (lower = longer trails)
-  fontSize: 10,               // Character size in pixels
-  
-  // Animation settings
-  fps: 12,                    // Target frames per second (~83ms per frame)
-  fallSpeed: 1,               // Pixels to move per frame
-  
-  // Character set
-  chars: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{}|;:,.<>?',
-  
-  // Responsive settings
-  columnWidthDesktop: 10,     // Column width on desktop (matches fontSize)
-  columnWidthMobile: 14,      // Wider columns on mobile for better performance
+type RainConfig = {
+  color: string;
+  leadColor: string;
+  opacity: number;
+  leadOpacity: number;
+  trailOpacity: number;
+  fontSize: number;
+  frameInterval: number;
+  fallSpeed: number;
+  chars: string;
+  columnWidthDesktop: number;
+  columnWidthMobile: number;
 };
+
+const CHARS =
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
+
+const BASE_CONFIG: RainConfig = {
+  color: '#8b5cf6',
+  leadColor: '#c4b5fd',
+  opacity: 0.12,
+  leadOpacity: 0.18,
+  trailOpacity: 0.05,
+  fontSize: 10,
+  frameInterval: 1000 / 12,
+  fallSpeed: 1,
+  chars: CHARS,
+  columnWidthDesktop: 10,
+  columnWidthMobile: 14,
+};
+
+// Approved Work page rain: larger type, a 30ms frame, and a faster fall.
+const WORK_CONFIG: RainConfig = {
+  ...BASE_CONFIG,
+  fontSize: 20,
+  frameInterval: 30,
+  fallSpeed: 2,
+  columnWidthDesktop: 20,
+  columnWidthMobile: 28,
+};
+
+function configForPath(pathname: string): RainConfig {
+  if (pathname === '/work' || pathname.startsWith('/work/')) {
+    return WORK_CONFIG;
+  }
+  return BASE_CONFIG;
+}
 
 export default function MatrixBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pathname = usePathname() ?? '/';
 
   useEffect(() => {
+    const CONFIG = configForPath(pathname);
     // Check for prefers-reduced-motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
@@ -42,7 +71,7 @@ export default function MatrixBackground() {
 
     let animationFrameId: number;
     let lastFrameTime = 0;
-    const frameInterval = 1000 / CONFIG.fps;
+    const frameInterval = CONFIG.frameInterval;
     
     let columns: number[] = [];
     let columnWidth: number;
@@ -140,7 +169,6 @@ export default function MatrixBackground() {
     document.addEventListener('visibilitychange', handleVisibilityChange);
     window.addEventListener('resize', handleResize);
 
-    // Cleanup
     return () => {
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
@@ -148,7 +176,7 @@ export default function MatrixBackground() {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <canvas
