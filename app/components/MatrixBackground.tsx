@@ -21,8 +21,8 @@ const CHARS =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
 
 const BASE_CONFIG: RainConfig = {
-  color: '#8b5cf6',
-  leadColor: '#c4b5fd',
+  color: '#3BA4FF',
+  leadColor: '#B9DCFF',
   opacity: 0.12,
   leadOpacity: 0.18,
   trailOpacity: 0.05,
