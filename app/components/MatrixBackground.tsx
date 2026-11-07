@@ -21,27 +21,27 @@ const CHARS =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
 
 const BASE_CONFIG: RainConfig = {
-  color: '#8b5cf6',
-  leadColor: '#c4b5fd',
+  color: '#3BA4FF',
+  leadColor: '#B9DCFF',
   opacity: 0.12,
   leadOpacity: 0.18,
   trailOpacity: 0.05,
-  fontSize: 10,
+  fontSize: 12,
   frameInterval: 1000 / 12,
-  fallSpeed: 1,
+  fallSpeed: 1.25,
   chars: CHARS,
-  columnWidthDesktop: 10,
-  columnWidthMobile: 14,
+  columnWidthDesktop: 12,
+  columnWidthMobile: 17,
 };
 
-// Approved Work page rain: larger type, a 30ms frame, and a faster fall.
+// Work page rain stays larger and faster than home: 30ms frames and a quicker fall.
 const WORK_CONFIG: RainConfig = {
   ...BASE_CONFIG,
-  fontSize: 20,
+  fontSize: 24,
   frameInterval: 30,
-  fallSpeed: 2,
-  columnWidthDesktop: 20,
-  columnWidthMobile: 28,
+  fallSpeed: 2.5,
+  columnWidthDesktop: 24,
+  columnWidthMobile: 34,
 };
 
 function configForPath(pathname: string): RainConfig {

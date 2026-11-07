@@ -72,28 +72,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Now - Doomsday Brand */}
+        {/* Current Projects */}
         <section id="now" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-zinc-800/50">
           <div className="container mx-auto max-w-5xl">
             <div className="space-y-8">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Current Projects</h2>
               <div className="grid gap-8 md:grid-cols-2">
-                <div className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold">
-                    <Link 
-                      href="https://doomsdaybrand.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-zinc-300 transition-colors"
-                    >
-                      Doomsday Brand →
-                    </Link>
-                  </h3>
-                  <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Hardstyle and hard dance lifestyle brand. Premium apparel and merch for a global community.
-                  </p>
-                </div>
-
                 <div className="space-y-4">
                   <h3 className="text-xl sm:text-2xl font-semibold">Freelance Consulting</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
