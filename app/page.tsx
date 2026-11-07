@@ -79,9 +79,9 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Current Projects</h2>
               <div className="grid gap-8 md:grid-cols-2">
                 <div className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold">Freelance Consulting</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold">AI Agent Systems Development</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Product management, creative direction, and brand strategy for Insomniac Events and leading entertainment brands.
+                    Building autonomous AI agent teams, cloud coding agents, and automated lead/sales systems.
                   </p>
                 </div>
               </div>
