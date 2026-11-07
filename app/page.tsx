@@ -168,13 +168,13 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">About</h2>
               <div className="space-y-6 text-base sm:text-lg text-zinc-400 leading-relaxed max-w-3xl">
                 <p>
-                  I&apos;m a project management and brand strategy leader with experience building products and experiences that connect people to culture. My work spans music, entertainment, and lifestyle brands—from global event production to digital media and apparel.
+                  I&apos;m a project manager and brand strategist who builds products, systems, and experiences that connect people to culture. My background spans music, entertainment, and lifestyle brands, from large-scale live event production to digital media and apparel design.
                 </p>
                 <p>
-                  Currently focused on multiple ventures including Doomsday Brand, Curated Live Events and Merch Booths, and developing innovative brand experiences across the entertainment landscape.
+                  Today I design and build AI agent systems: teams of autonomous agents that handle research, development, and automated lead and sales pipelines. Previously, I ran Doomsday Brand, a hardstyle-inspired apparel label, and produced live events and merch booths.
                 </p>
                 <p>
-                  Bilingual (English/Spanish). Based in the US. FIDM graduate.
+                  I bring a creative director&apos;s eye and an operator&apos;s discipline to every project. I&apos;m bilingual in English and Spanish, based in Southern California, and open to new projects and collaborations.
                 </p>
               </div>
             </div>
