@@ -171,7 +171,7 @@ export default function Home() {
                   I&apos;m a project management and brand strategy leader with experience building products and experiences that connect people to culture. My work spans music, entertainment, and lifestyle brands—from global event production to digital media and apparel.
                 </p>
                 <p>
-                  Currently focused on multiple ventures including Doomsday Brand, consulting for Insomniac Events, and developing innovative brand experiences across the entertainment landscape.
+                  Currently focused on multiple ventures including Doomsday Brand, Curated Live Events and Merch Booths, and developing innovative brand experiences across the entertainment landscape.
                 </p>
                 <p>
                   Bilingual (English/Spanish). Based in the US. FIDM graduate.
