@@ -89,7 +89,7 @@ export default function WorkPage() {
                 <article className="space-y-4 rounded-xl border border-zinc-800/70 bg-black/60 p-6 sm:p-8">
                   <h2 className="text-xl sm:text-2xl font-semibold">Cherry Valley Analytics</h2>
                   <p className="text-base sm:text-lg leading-relaxed text-zinc-300">
-                    Built the offer, site and automated lead system.
+                    Developed website, AI agents and automated lead system.
                   </p>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
                     An AI agent team for businesses, with a free Agent Audit.

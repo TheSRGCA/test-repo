@@ -104,7 +104,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <h3 className="text-xl sm:text-2xl font-semibold">Cherry Valley Analytics</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Built the offer, site and automated lead system.
+                    Developed website, AI agents and automated lead system.
                   </p>
                 </div>
 
