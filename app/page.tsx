@@ -173,25 +173,19 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">About</h2>
               <div className="space-y-6 text-base sm:text-lg text-zinc-400 leading-relaxed max-w-3xl">
                 <p>
-                  I’m a multidisciplinary professional with over 10 years of experience in brand strategy, e-commerce, digital marketing, and project development.
+                  I’m a multidisciplinary professional with over 10 years of experience spanning brand strategist who builds products, systems, and experiences that connect people to culture. My background spans music, entertainment, and lifestyle brands, from large-scale live event production to digital media and e-commerce.
                 </p>
                 <p>
-                  Throughout my career, I’ve worked across entertainment, lifestyle brands, and digital commerce, helping transform creative concepts into engaging brand experiences and business solutions. My approach combines strategic planning, creative direction, and technology to connect brands with their audiences.
+                  My background also includes hands-on experience developing and managing Shopify storefronts for both clients and independent brands, I understand how brand identity, online merchandising, digital marketing, and customer experience work together to support commercial objectives.
                 </p>
                 <p>
-                  With hands-on experience using Shopify, I bring an understanding of e-commerce storefront development, product presentation, and digital customer experiences. I focus on aligning brand identity with online commerce to create cohesive shopping experiences that support business objectives.
+                  Today, my work extends into artificial intelligence and automation, where I design and build AI agent systems that support research, development, lead generation, and automated sales workflows. I’m particularly interested in connecting emerging technologies with real-world business applications.
                 </p>
                 <p>
-                  My professional interests continue to evolve through business analytics, artificial intelligence, and emerging technologies. I’m particularly interested in how data-driven insights and intelligent automation can improve marketing performance, customer engagement, and operational efficiency.
-                </p>
-                <p>
-                  I believe successful brands are built through a combination of creativity, strategy, and informed decision-making.
+                  Based in Southern California, I’m bilingual in English and Spanish and open to new projects, strategic partnerships, and creative collaborations.
                 </p>
                 <p>
                   <span className="font-semibold text-zinc-300">Core Expertise:</span> Brand Strategy · E-Commerce · Shopify · Digital Marketing · Project Management · Business Analytics · Creative Direction
-                </p>
-                <p>
-                  <span className="font-semibold text-zinc-300">Languages:</span> English / Spanish
                 </p>
               </div>
             </div>
