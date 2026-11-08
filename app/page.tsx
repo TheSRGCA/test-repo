@@ -27,9 +27,14 @@ export default function Home() {
               <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] break-words">
                 Sergio Armando
               </h1>
-              <p className="text-xl sm:text-2xl md:text-3xl text-zinc-400 max-w-3xl leading-relaxed">
-                Project Management · Branding · Digital Media
-              </p>
+              <div className="max-w-3xl space-y-4">
+                <p className="text-xl sm:text-2xl md:text-3xl text-zinc-400 leading-relaxed">
+                  Brand Strategy | E-Commerce | Digital Marketing | AI &amp; Automation
+                </p>
+                <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
+                  Building brands, developing digital commerce experiences, and connecting creative strategy with technology and data-driven business growth.
+                </p>
+              </div>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link 
                   href="#contact"
@@ -99,7 +104,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <h3 className="text-xl sm:text-2xl font-semibold">Cherry Valley Analytics</h3>
                   <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    Built the offer, site and automated lead system.
+                    Developed website, AI agents and automated lead system.
                   </p>
                 </div>
 
@@ -168,13 +173,19 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">About</h2>
               <div className="space-y-6 text-base sm:text-lg text-zinc-400 leading-relaxed max-w-3xl">
                 <p>
-                  I&apos;m a project manager and brand strategist who builds products, systems, and experiences that connect people to culture. My background spans music, entertainment, and lifestyle brands, from large-scale live event production to digital media and apparel design.
+                  I’m a multidisciplinary professional with over 10 years of experience spanning brand strategist who builds products, systems, and experiences that connect people to culture. My background spans music, entertainment, and lifestyle brands, from large-scale live event production to digital media and e-commerce.
                 </p>
                 <p>
-                  Today I design and build AI agent systems: teams of autonomous agents that handle research, development, and automated lead and sales pipelines. Previously, I ran Doomsday Brand, a hardstyle-inspired apparel label, and produced live events and merch booths.
+                  My background also includes hands-on experience developing and managing Shopify storefronts for both clients and independent brands, I understand how brand identity, online merchandising, digital marketing, and customer experience work together to support commercial objectives.
                 </p>
                 <p>
-                  I bring a creative director&apos;s eye and an operator&apos;s discipline to every project. I&apos;m bilingual in English and Spanish, based in Southern California, and open to new projects and collaborations.
+                  Today, my work extends into artificial intelligence and automation, where I design and build AI agent systems that support research, development, lead generation, and automated sales workflows. I’m particularly interested in connecting emerging technologies with real-world business applications.
+                </p>
+                <p>
+                  Based in Southern California, I’m bilingual in English and Spanish and open to new projects, strategic partnerships, and creative collaborations.
+                </p>
+                <p>
+                  <span className="font-semibold text-zinc-300">Core Expertise:</span> Brand Strategy · E-Commerce · Shopify · Digital Marketing · Project Management · Business Analytics · Creative Direction
                 </p>
               </div>
             </div>
@@ -217,7 +228,6 @@ export default function Home() {
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
             <p>© {new Date().getFullYear()} Sergio Armando. All rights reserved.</p>
-            <p className="text-zinc-600">FIDM Graduate</p>
           </div>
         </div>
       </footer>

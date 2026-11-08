@@ -78,7 +78,7 @@ export default function WorkPage() {
                   Work
                 </h1>
                 <p className="text-xl sm:text-2xl text-zinc-400 max-w-3xl leading-relaxed">
-                  Project Management · Branding · Digital Media
+                  Brand Strategy | E-Commerce | Digital Marketing | AI &amp; Automation
                 </p>
                 <p className="text-base sm:text-lg text-zinc-400 max-w-3xl leading-relaxed">
                   Brand and creative work for the hardstyle scene: designing apparel, managing a brand&apos;s social and digital media, and partnering with Basscon on a limited-edition collab.
@@ -89,10 +89,7 @@ export default function WorkPage() {
                 <article className="space-y-4 rounded-xl border border-zinc-800/70 bg-black/60 p-6 sm:p-8">
                   <h2 className="text-xl sm:text-2xl font-semibold">Cherry Valley Analytics</h2>
                   <p className="text-base sm:text-lg leading-relaxed text-zinc-300">
-                    Built the offer, site and automated lead system.
-                  </p>
-                  <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    An AI agent team for businesses, with a free Agent Audit.
+                    Developed website, AI agents and automated lead system.
                   </p>
                   <ul className="m-0 flex list-none flex-wrap gap-x-5 gap-y-2 p-0 text-base">
                     <li>
@@ -194,7 +191,6 @@ export default function WorkPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
             <p>© {new Date().getFullYear()} Sergio Armando. All rights reserved.</p>
-            <p className="text-zinc-600">FIDM Graduate</p>
           </div>
         </div>
       </footer>
