@@ -194,7 +194,6 @@ export default function WorkPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
             <p>© {new Date().getFullYear()} Sergio Armando. All rights reserved.</p>
-            <p className="text-zinc-600">FIDM Graduate</p>
           </div>
         </div>
       </footer>
