@@ -91,9 +91,6 @@ export default function WorkPage() {
                   <p className="text-base sm:text-lg leading-relaxed text-zinc-300">
                     Developed website, AI agents and automated lead system.
                   </p>
-                  <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-                    An AI agent team for businesses, with a free Agent Audit.
-                  </p>
                   <ul className="m-0 flex list-none flex-wrap gap-x-5 gap-y-2 p-0 text-base">
                     <li>
                       <a
