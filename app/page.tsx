@@ -199,7 +199,7 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Contact</h2>
               <div className="space-y-4">
                 <p className="text-base sm:text-lg text-zinc-400 max-w-2xl">
-                  Open to consulting, product development, project management and brand collaborations.
+                  Open to consulting, product development, and brand collaborations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Link 
