@@ -29,7 +29,7 @@ export default function Home() {
               </h1>
               <div className="max-w-3xl space-y-4">
                 <p className="text-xl sm:text-2xl md:text-3xl text-zinc-400 leading-relaxed">
-                  Brand Strategy | E-Commerce | Digital Marketing | Analytics
+                  Brand Strategy | E-Commerce | Digital Marketing | AI &amp; Automation
                 </p>
                 <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
                   Building brands, developing digital commerce experiences, and connecting creative strategy with technology and data-driven business growth.

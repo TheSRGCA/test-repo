@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sergio Armando (SRGCA) — Brand Strategy | E-Commerce | Digital Marketing | Analytics",
+  title: "Sergio Armando (SRGCA) — Brand Strategy | E-Commerce | Digital Marketing | AI & Automation",
   description: "Sergio Armando (SRGCA) — Building brands, developing digital commerce experiences, and connecting creative strategy with technology and data-driven business growth.",
   keywords: ["Sergio Armando", "SRGCA", "project management", "brand strategy", "digital media", "entertainment", "product management"],
   authors: [{ name: "Sergio Armando" }],
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://srgca.online",
     siteName: "SRGCA",
-    title: "Sergio Armando (SRGCA) — Brand Strategy | E-Commerce | Digital Marketing | Analytics",
+    title: "Sergio Armando (SRGCA) — Brand Strategy | E-Commerce | Digital Marketing | AI & Automation",
     description: "Building brands, developing digital commerce experiences, and connecting creative strategy with technology and data-driven business growth.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sergio Armando (SRGCA) — Brand Strategy | E-Commerce | Digital Marketing | Analytics",
+    title: "Sergio Armando (SRGCA) — Brand Strategy | E-Commerce | Digital Marketing | AI & Automation",
     description: "Building brands, developing digital commerce experiences, and connecting creative strategy with technology and data-driven business growth.",
     creator: "@TheSRG_CA",
   },

@@ -78,7 +78,7 @@ export default function WorkPage() {
                   Work
                 </h1>
                 <p className="text-xl sm:text-2xl text-zinc-400 max-w-3xl leading-relaxed">
-                  Brand Strategy | E-Commerce | Digital Marketing | Analytics
+                  Brand Strategy | E-Commerce | Digital Marketing | AI &amp; Automation
                 </p>
                 <p className="text-base sm:text-lg text-zinc-400 max-w-3xl leading-relaxed">
                   Brand and creative work for the hardstyle scene: designing apparel, managing a brand&apos;s social and digital media, and partnering with Basscon on a limited-edition collab.
