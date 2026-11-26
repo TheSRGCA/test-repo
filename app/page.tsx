@@ -173,7 +173,7 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">About</h2>
               <div className="space-y-6 text-base sm:text-lg text-zinc-400 leading-relaxed max-w-3xl">
                 <p>
-                  I’m a multidisciplinary professional with over 10 years of experience spanning brand strategist who builds products, systems, and experiences that connect people to culture. My background spans music, entertainment, and lifestyle brands, from large-scale live event production to digital media and e-commerce.
+                  I’m a multidisciplinary brand strategist with over 10 years of experience building products, systems, and experiences that connect people to culture. My background spans music, entertainment, and lifestyle brands, from large-scale live event production to digital media and e-commerce.
                 </p>
                 <p>
                   My background also includes hands-on experience developing and managing Shopify storefronts for both clients and independent brands, I understand how brand identity, online merchandising, digital marketing, and customer experience work together to support commercial objectives.

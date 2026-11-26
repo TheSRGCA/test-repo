@@ -111,4 +111,4 @@ X: [@TheSRG_CA](https://x.com/TheSRG_CA)
 
 ---
 
-Built with Next.js. FIDM Graduate.
+Built with Next.js.
